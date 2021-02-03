@@ -12,7 +12,9 @@ var pairsByIndex = [
     [2, 1], null, [3, 0]
 ];
 
-var result = pairsByIndex.some(nullValue);
+// pairsByIndex.some(x => x !== null)
+
+// var result = pairsByIndex.some(nullValue);
 
 function nullValue(pairsByIndex) {
     if (pairsByIndex === null) {
