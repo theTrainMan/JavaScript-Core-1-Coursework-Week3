@@ -18,10 +18,12 @@ var groupIsOnlyStudents = group.every(function(students, group) {
 // }
 for (let i = 0; i <= group.length; i++) {
     let person = group[i];
+    console.log('Checking' + person);
     let personIsStudent = false;
     for (let j = 0; j <= students.length; j++) {
         if (person === students[j]) {
             personIsStudent === true;
+            break;
         };
     }
 }
