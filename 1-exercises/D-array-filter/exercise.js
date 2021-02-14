@@ -12,11 +12,9 @@ var pairsByIndexRaw = [
     [2, 1], null, [1], false, "whoops"
 ];
 
-var pairsByIndex = pairsByIndex.filter(newPairsByIndex)
-
-function newPairsByIndex(item) {
-    return
-}; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(
+    (el) => Array.isArray(el) && el.length === 2
+); // Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
@@ -28,3 +26,4 @@ var pairs = pairsByIndex.map(function(indexes) {
 });
 
 console.log(pairs);
+console.log(pairsByIndex);
