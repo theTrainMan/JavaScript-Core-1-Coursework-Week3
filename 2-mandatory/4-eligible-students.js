@@ -7,19 +7,20 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+function eligibleStudents(Array) {
+    let eligibleStudentArray = [];
+    return Array.filter(level => level[1] >= 8).map(str => str[0]);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const attendances = [
-  ["Ahmed", 8],
-  ["Clement", 10],
-  ["Elamin", 6],
-  ["Adam", 7],
-  ["Tayoa", 11],
-  ["Nina", 10]
+    ["Ahmed", 8],
+    ["Clement", 10],
+    ["Elamin", 6],
+    ["Adam", 7],
+    ["Tayoa", 11],
+    ["Nina", 10]
 ]
 
 const util = require('util');
@@ -36,6 +37,5 @@ function test(test_name, actual, expected) {
 }
 
 test("eligibleStudents function works",
-  eligibleStudents(attendances),
-  ["Ahmed", "Clement", "Tayoa", "Nina"]
+    eligibleStudents(attendances), ["Ahmed", "Clement", "Tayoa", "Nina"]
 );
